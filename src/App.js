@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button, TextField, Box } from '@mui/material'
 import './App.css';
 
@@ -8,6 +8,9 @@ function App() {
   const change = () => {
     setData([...data, name])
   }
+  useEffect(()=> {
+    setData(data)
+  }, [data])
   const reset = () => {
     setData([])
     setName('')
@@ -15,7 +18,6 @@ function App() {
   return (
     <div className="App">
       <Box
-        component="form"
         sx={{
           '& > :not(style)': { m: 1, width: '25ch' },
         }}
@@ -23,28 +25,36 @@ function App() {
         autoComplete="off"
       >
         <TextField
+          required
           id="outlined-controlled"
           label="Enter text"
           defaultValue={name}
           onChange={(text) => setName(text.target.value)}
-          onKeyPress={(e) => e.key === 'Enter' && change()}
+          onKeyPress={(e) => {
+            if(e.key=='Enter'){
+              if(name.length >= 2) return change()
+              return false;
+            }
+          }}
           size='small'
         />
-        <Button onClick={() => change()}
-            variant="contained" 
-            color="success"
+        <Button 
+          disabled={name.length < 3 ? true : false}
+          onClick={() => change()}
+          variant="contained" 
+          color="success"
           >change text</Button>
         <Button 
-            variant="outlined" 
-            color="error"
-            onClick={() => reset()}
+          variant="outlined" 
+          color="error"
+          onClick={() => reset()}
           >
-            initilize
-          </Button>
-        </Box>
-        {
-          data.map(x=><h1>name: {x}</h1>)
-        }
+          initilize
+        </Button>
+      </Box>
+      {
+        data.length != 0 ? data.map(x=><h1 key={Math.random()*101}>name: {x}</h1>):''
+      }
     </div>
   );
 }
