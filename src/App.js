@@ -28,7 +28,6 @@ function App() {
           required
           id="outlined-controlled"
           label="Enter text"
-          defaultValue={name}
           onChange={(text) => setName(text.target.value)}
           onKeyPress={(e) => {
             if(e.key=='Enter'){
