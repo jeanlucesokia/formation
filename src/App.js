@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Button, TextField, Box } from '@mui/material'
 import './App.css';
 
 function App() {
@@ -13,18 +14,37 @@ function App() {
   }
   return (
     <div className="App">
-      <div>
-        <input
+      <Box
+        component="form"
+        sx={{
+          '& > :not(style)': { m: 1, width: '25ch' },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
+          id="outlined-controlled"
+          label="Enter text"
+          defaultValue={name}
           onChange={(text) => setName(text.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && change()}
-          value={name}
+          size='small'
         />
-        <button onClick={() => change()}>change text</button>
-        <button onClick={() => reset()}>initilize</button>
-      </div>
-      {
-        data.map(x=><h1>name: {x}</h1>)
-      }
+        <Button onClick={() => change()}
+            variant="contained" 
+            color="success"
+          >change text</Button>
+        <Button 
+            variant="outlined" 
+            color="error"
+            onClick={() => reset()}
+          >
+            initilize
+          </Button>
+        </Box>
+        {
+          data.map(x=><h1>name: {x}</h1>)
+        }
     </div>
   );
 }
