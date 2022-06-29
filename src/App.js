@@ -37,6 +37,7 @@ function App() {
             }
           }}
           size='small'
+          value={name}
         />
         <Button 
           disabled={name.length < 3 ? true : false}
