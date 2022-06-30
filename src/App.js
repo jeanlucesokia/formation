@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { Button, TextField, Box } from "@mui/material";
-import "./App.css";
+import { useEffect, useState } from 'react';
+import { Button, TextField, Box } from '@mui/material';
+import './App.css';
 
 function App() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [data, setData] = useState([]);
   const change = () => {
     setData([...data, name]);
@@ -13,13 +13,13 @@ function App() {
   }, [data]);
   const reset = () => {
     setData([]);
-    setName("");
+    setName('');
   };
   return (
     <div className="App">
       <Box
         sx={{
-          "& > :not(style)": { m: 1, width: "25ch" },
+          '& > :not(style)': { m: 1, width: '25ch' },
         }}
         noValidate
         autoComplete="off"
@@ -30,7 +30,7 @@ function App() {
           label="Enter text"
           onChange={(text) => setName(text.target.value)}
           onKeyPress={(e) => {
-            if (e.key == "Enter") {
+            if (e.key == 'Enter') {
               if (name.length >= 2) return change();
               return false;
             }
@@ -52,7 +52,7 @@ function App() {
       </Box>
       {data.length != 0
         ? data.map((x) => <h1 key={Math.random() * 101}>name: {x}</h1>)
-        : ""}
+        : ''}
     </div>
   );
 }
