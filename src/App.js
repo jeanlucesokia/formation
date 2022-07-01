@@ -1,16 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Button, TextField, Box } from '@mui/material';
+import Videos from './videos/Videos.mp4';
 import './App.css';
 
 function App() {
   const [name, setName] = useState('');
   const [data, setData] = useState([]);
+  const [timer, setTimer] = useState(1);
+  const refVideo = useRef();
   const change = () => {
     setData([...data, name]);
   };
+
+  useEffect(() => {
+    const intervalID = setInterval(() => {
+      setTimer((timer) => timer + 1);
+    }, 1000);
+    return () => {
+      clearInterval(intervalID);
+    };
+  }, []);
+
   useEffect(() => {
     setData(data);
+    setTimeout(() => {
+      refVideo.current.pause();
+    }, 1500);
   }, [data]);
+
   const reset = () => {
     setData([]);
     setName('');
@@ -24,6 +41,12 @@ function App() {
         noValidate
         autoComplete="off"
       >
+        <TextField
+          required
+          id="outlined-controlled"
+          size="small"
+          value={timer}
+        />
         <TextField
           required
           id="outlined-controlled"
@@ -50,9 +73,15 @@ function App() {
           initilize
         </Button>
       </Box>
-      {data.length != 0
-        ? data.map((x) => <h1 key={Math.random() * 101}>name: {x}</h1>)
-        : ''}
+      <div>
+        {data.length != 0 &&
+          data.map((x) => <h1 key={Math.random() * 101}>name: {x}</h1>)}
+      </div>
+      <div>
+        <video ref={refVideo} width="750" height="500" autoPlay controls muted>
+          <source src={Videos} type="video/mp4" />
+        </video>
+      </div>
     </div>
   );
 }
