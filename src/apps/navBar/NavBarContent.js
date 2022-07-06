@@ -88,6 +88,7 @@ const useStyles = {
     fontFamily: 'Comic Sans MS',
   },
   text_content: {
+    marginTop: -70,
     fontSize: '2 rem',
     color: 'white',
   },

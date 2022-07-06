@@ -11,7 +11,7 @@ const NavBar = (props) => {
         justifyContent: 'center',
         fontSize: '0.875rem',
         height: '700px',
-        backgroundImage: `url(${shutterStock})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL + shutterStock})`,
         ...sx,
       }}
     >
