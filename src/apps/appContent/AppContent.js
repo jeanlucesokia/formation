@@ -1,24 +1,20 @@
 import Box from '@mui/material/Box';
+import ItemContent from './ItemContent';
 const AppContent = (props) => {
-  const { sx, ...other } = props;
+  const { sx } = props;
   return (
     <Box
       sx={{
-        bgcolor: (theme) =>
-          theme.palette.mode === 'dark' ? '#101010' : '#fff',
-        color: (theme) =>
-          theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
-        border: '1px solid',
-        borderColor: (theme) =>
-          theme.palette.mode === 'dark' ? 'grey.800' : 'grey.300',
-        p: 1,
+        display: 'flex',
+        justifyContent: 'center',
         textAlign: 'center',
         fontSize: '0.875rem',
-        fontWeight: '700',
+        height: '400px',
         ...sx,
       }}
-      {...other}
-    />
+    >
+      <ItemContent />
+    </Box>
   );
 };
 export default AppContent;

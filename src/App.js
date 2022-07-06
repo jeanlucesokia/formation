@@ -14,9 +14,7 @@ function App() {
       >
         <MiniBar />
         <NavBar />
-        <AppContent>
-          <h1>AppContent</h1>
-        </AppContent>
+        <AppContent />
       </Box>
     </div>
   );

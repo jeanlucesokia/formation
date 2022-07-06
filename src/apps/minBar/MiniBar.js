@@ -2,8 +2,7 @@ import { Stack, Divider } from '@mui/material';
 import { PhoneAndroid } from '@mui/icons-material';
 import Box from '@mui/material/Box';
 import ItemMiniBar from './ItemMiniBar';
-const MiniBar = (props) => {
-  const { sx } = props;
+const MiniBar = () => {
   return (
     <Box
       sx={{
