@@ -12,6 +12,9 @@ const NavBar = (props) => {
         fontSize: '0.875rem',
         height: '700px',
         backgroundImage: `url(${process.env.PUBLIC_URL + shutterStock})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
         ...sx,
       }}
     >

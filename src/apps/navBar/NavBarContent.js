@@ -20,7 +20,7 @@ const NavBarContent = () => {
                 alt="esokia_logo"
                 className={{ width: 100, height: 100 }}
               />
-              <Box width={400} />
+              <Box width={420} />
               <Button
                 onClick={() => window.alert('Esokia')}
                 color="inherit"
@@ -52,8 +52,8 @@ const NavBarContent = () => {
       </AppBar>
       <Stack height={70} />
       <Stack direction="row">
-        <Box width={300} />
-        <Stack direction="column" style={{ width: '100%' }}>
+        <Box width={'15%'} />
+        <Stack direction="column" style={{ width: '40%' }}>
           <div style={useStyles.text_title}>
             <p>
               L'agence digitale

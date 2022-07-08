@@ -9,6 +9,8 @@ const NoServices = () => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
         height: '520px',
         width: '100%',
       }}

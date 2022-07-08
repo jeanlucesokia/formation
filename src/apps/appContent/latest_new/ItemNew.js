@@ -8,16 +8,12 @@ const ItemNew = () => {
         variant="h3"
         component="div"
         gutterBottom
-        style={{ color: 'rgb(66, 221, 245)' }}
+        style={{ color: '#4ec1e0' }}
       >
         Latest News
       </Typography>
       <Stack direction="row">
-        <Typography
-          variant="body1"
-          gutterBottom
-          style={{ color: 'rgb(61, 64, 61)' }}
-        >
+        <Typography variant="body1" gutterBottom style={{ color: '#818283' }}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
           blanditiis tenetur unde suscipit, quam beatae rerum inventore
           consectetur, neque doloribus, cupiditate numquam dignissimos laborum
@@ -26,10 +22,7 @@ const ItemNew = () => {
         <Stack width={10} />
       </Stack>
       <Typography>
-        <Button
-          variant="text"
-          style={{ color: 'rgb(66, 221, 245)', fontWeight: 'bold' }}
-        >
+        <Button variant="text" style={{ color: '#4ec1e0', fontWeight: 'bold' }}>
           Read more »
         </Button>
       </Typography>

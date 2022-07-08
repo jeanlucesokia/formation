@@ -10,7 +10,7 @@ const Footer = () => {
         justifyContent: 'center',
         height: '350px',
         width: '100%',
-        backgroundColor: 'rgb(17, 18, 17)',
+        backgroundColor: '#161b1d',
       }}
     >
       <Stack direction="row">
@@ -112,14 +112,14 @@ const useStyles = {
     alignItems: 'center',
   },
   text_typography: {
-    color: 'rgb(61, 64, 61)',
+    color: '#818283',
     fontSize: '1 rem',
     textAlign: 'justify',
     marginLeft: '10%',
     marginRight: '10%',
   },
   text_typography_liste: {
-    color: 'rgb(61, 64, 61)',
+    color: '#818283',
     fontSize: '1 rem',
     textAlign: 'justify',
     marginLeft: '10%',
@@ -127,7 +127,7 @@ const useStyles = {
     height: '40px',
   },
   text_typography_liste_group: {
-    color: 'rgb(61, 64, 61)',
+    color: '#818283',
     fontSize: '1 rem',
     textAlign: 'justify',
     marginLeft: '10%',

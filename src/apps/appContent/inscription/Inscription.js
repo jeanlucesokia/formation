@@ -12,6 +12,7 @@ const Inscription = () => {
         justifyContent: 'center',
         height: '350px',
         width: '100%',
+        backgroundColor: '#e1e1e1',
       }}
     >
       <Stack direction="column" spacing={2}>
@@ -41,7 +42,9 @@ const Inscription = () => {
                 id="outlined-size-small"
                 size="small"
                 style={{ width: '200%' }}
-                sx={{ input: { textAlign: 'center' } }}
+                sx={{
+                  input: { textAlign: 'center', backgroundColor: 'white' },
+                }}
               />
               <TextField
                 placeholder="Votre adresse email"
@@ -50,12 +53,14 @@ const Inscription = () => {
                 style={{
                   width: '200%',
                 }}
-                sx={{ input: { textAlign: 'center' } }}
+                sx={{
+                  input: { textAlign: 'center', backgroundColor: 'white' },
+                }}
               />
               <Button
                 variant="contained"
                 style={{
-                  backgroundColor: '#00e676',
+                  backgroundColor: '#7fb618',
                   fontWeight: 'bold',
                   width: '60%',
                 }}

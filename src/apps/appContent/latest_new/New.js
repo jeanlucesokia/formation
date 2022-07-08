@@ -36,7 +36,7 @@ const styles = {
     display: 'flex',
     width: '100%',
     height: '410px',
-    backgroundColor: 'rgb(2, 6, 41)',
+    backgroundColor: '#0b1a26',
   },
 };
 export default New;
