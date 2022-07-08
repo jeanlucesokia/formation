@@ -4,7 +4,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import esokia_logo from '../../assets/esokia_logo.png';
 import Stack from '@mui/material/Stack';
+import { useNavigate } from 'react-router-dom';
 const NavBarContent = () => {
+  const navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -28,19 +30,39 @@ const NavBarContent = () => {
               >
                 Esokia
               </Button>
-              <Button color="inherit" sx={useStyles.text_initial}>
+              <Button
+                onClick={() => navigate('/psd')}
+                color="inherit"
+                sx={useStyles.text_initial}
+              >
                 Services
               </Button>
-              <Button color="inherit" sx={useStyles.text_initial}>
+              <Button
+                onClick={() => navigate('/psd')}
+                color="inherit"
+                sx={useStyles.text_initial}
+              >
                 Références
               </Button>
-              <Button color="inherit" sx={useStyles.text_initial}>
+              <Button
+                onClick={() => navigate('/psd')}
+                color="inherit"
+                sx={useStyles.text_initial}
+              >
                 Carrières
               </Button>
-              <Button color="inherit" sx={useStyles.text_initial}>
+              <Button
+                onClick={() => navigate('/psd')}
+                color="inherit"
+                sx={useStyles.text_initial}
+              >
                 Actualités
               </Button>
-              <Button color="inherit" sx={useStyles.text_initial}>
+              <Button
+                onClick={() => navigate('/psd')}
+                color="inherit"
+                sx={useStyles.text_initial}
+              >
                 Devis
               </Button>
               <Button color="inherit" sx={useStyles.text_initial}>
@@ -75,6 +97,7 @@ const NavBarContent = () => {
 const useStyles = {
   text_initial: {
     textTransform: 'initial',
+    fontFamily: 'Arial',
     ':hover': {
       bgcolor: 'rgb(38, 158, 173)',
       color: 'white',
