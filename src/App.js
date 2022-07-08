@@ -1,25 +1,18 @@
 import './App.css';
-import Box from '@mui/material/Box';
-import MiniBar from './apps/minBar/MiniBar';
-import NavBar from './apps/navBar/NavBar';
-import AppContent from './apps/appContent/AppContent';
-import Footer from './apps/footer/Footer';
+import Container from '@mui/material/Container';
+import RoutesApps from './routes/RoutesApps';
 function App() {
   return (
-    <div className="app">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <MiniBar />
-        <NavBar />
-        <AppContent />
-        <Footer />
-      </Box>
-    </div>
+    <Container maxWidth={false} style={useStyles.container}>
+      <RoutesApps />
+    </Container>
   );
 }
+const useStyles = {
+  container: {
+    paddingLeft: 0,
+    paddingRight: 0,
+  },
+};
 
 export default App;
